@@ -4,9 +4,9 @@ define([
 	// Define required libraries for module
     // ---------------------------------------
 
-	  "jquery"
-	, "jqueryUI"
-    , "bootstrap"
+	"jquery", 
+	"jqueryUI", 
+    "bootstrap"  
 
 ],function(){
 

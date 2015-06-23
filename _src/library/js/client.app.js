@@ -4,10 +4,10 @@ define([
     // Define required libraries for module
     // ---------------------------------------
 
-	  "jquery"
-    , "migratePlugin"
-	, "client.userInterface.js"
-	, "console"
+	"jquery",
+    "migratePlugin",
+	"client.userInterface.js",
+	"console"
 
 ], function ($, migratePlugin, userInterface) {
 

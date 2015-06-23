@@ -1,0 +1,32 @@
+// Background Variant
+// @source base/mixins/_color.scss
+// --------------------------------------------------
+
+@mixin m-background-variant( $parent, $color ) {
+
+	#{$parent} {
+		@include m-color( background-color, $color, 1 );
+	}
+
+	a#{$parent}:hover {
+		@include m-color( background-color, darken( $color, 10% ), 1 );
+	}
+}
+
+// Border Color
+// @source base/mixins/_color.scss
+// --------------------------------------------------
+
+@mixin m-border-color( $property, $size, $style, $color, $a ) {
+	#{$property}: $size $style rgb( red($color), green($color), blue($color) );
+	#{$property}: $size $style rgba( red($color), green($color), blue($color), $a );
+}
+
+// Color
+// @source base/mixins/_color.scss
+// --------------------------------------------------
+
+@mixin m-color( $property, $color, $a ) {
+	#{$property}: rgb( red($color), green($color), blue($color) );
+	#{$property}: rgba( red($color), green($color), blue($color), $a );
+}

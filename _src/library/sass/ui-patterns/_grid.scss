@@ -1,0 +1,72 @@
+// BEGIN: Container
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+.container {
+	
+	@include m-container-fixed;
+	
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+	}
+	
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+	
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+}
+
+// BEGIN: Fluid Container
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+.container-fluid {
+	@include m-container-fixed;
+}
+
+// BEGIN: Rows
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+.row {
+	@include m-create-row;
+}
+
+// BEGIN: Columns
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+@include m-create-grid-columns;
+
+// BEGIN: Large Grid
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+@media (min-width: $screen-lg-min) {
+	@include m-create-grid(lg);
+}
+
+// BEGIN: Medium Grid
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+@media (min-width: $screen-md-min) {
+	@include m-create-grid(md);
+}
+
+// BEGIN: Small Grid
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+@media (min-width: $screen-sm-min) {
+	@include m-create-grid(sm);
+}
+
+// BEGIN: Extra Small Grid
+// @source base/ui-patterns/_grid.scss
+// --------------------------------------------------
+
+@include m-create-grid(xs);

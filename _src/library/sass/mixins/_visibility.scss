@@ -1,0 +1,33 @@
+// Responsive Visibility
+// @source base/mixins/ _visibility.scss
+// --------------------------------------------------
+
+@mixin m-responsive-visibility( $parent ) {
+
+	#{$parent} {
+		display: block !important;
+	}
+
+	table#{$parent} { 
+		display: table; 
+	}
+
+	tr#{$parent} { 
+		display: table-row !important; 
+	}
+	
+	th#{$parent}, td#{$parent} { 
+		display: table-cell !important; 
+	}
+}
+
+// Responsive Invisibility
+// @source base/mixins/ _visibility.scss
+// --------------------------------------------------
+
+@mixin m-responsive-invisibility($parent) {
+	
+	#{$parent} {
+		display: none !important;
+	}
+}

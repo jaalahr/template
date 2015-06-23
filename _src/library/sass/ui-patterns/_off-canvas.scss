@@ -1,0 +1,83 @@
+// Off Canvas
+// @source base/ui-patterns/_off-canvas.scss
+// --------------------------------------------------
+
+.off-canvas-wrapper {
+
+	border: 1px solid red;
+	background: $off-canvas-background-color;
+	bottom: 0;
+	box-sizing: content-box;
+	display: block;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: rem-calculation(250);
+	z-index: $z-index-off-canvas;
+	
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+  
+	@include m-backface-visibility(hidden);
+	@include m-transition( $off-canvas-transform-animation );
+	
+	* {
+		@include m-backface-visibility(hidden);
+	}
+	
+	&.left {
+		
+		@include m-translateX( -($off-canvas-position) );
+		
+		&.active {
+			
+			min-height: 100%;
+			-webkit-overflow-scrolling: touch;
+			
+			@include m-translateX(0);
+		}
+	}
+	
+	&.right {
+	
+		@include m-translateX( $off-canvas-position );
+		
+		&.active {
+			
+			min-height: 100%;
+			-webkit-overflow-scrolling: touch;
+			
+			@include m-translateX( -($off-canvas-position) );
+		}
+	}
+	
+	.off-canvas-container {
+		
+		position: relative;
+		width: 100%;
+		
+		@include m-backface-visibility(hidden);
+		@include m-clearfix();
+		@include m-transition( $off-canvas-transform-animation );
+	}
+	
+	.off-canvas-toggle {
+		cursor: pointer;
+	}
+}
+
+.off-canvas-relative {
+
+	@include m-transition( $off-canvas-transform-animation );
+
+	&.left {
+		@include m-translateX( $off-canvas-width );
+	}
+	
+	&.right {
+		@include m-translateX( -($off-canvas-width) );
+	}
+}

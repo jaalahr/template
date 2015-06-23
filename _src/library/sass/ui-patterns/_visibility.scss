@@ -1,0 +1,40 @@
+// Visibility
+// @source base/ui-patterns/_visibility.scss
+// --------------------------------------------------
+
+.hidden {
+	display: none !important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.sr-only {
+	
+	border: 0;
+	clip: rect(0,0,0,0);
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.sr-only-focusable {
+
+	&:active, &:focus {
+		
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+.visible {
+	display: block !important;
+}

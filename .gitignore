@@ -1,0 +1,36 @@
+# General Files
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.tgz
+
+
+# Code Igniter
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
+
+
+# Codekit
+*-ck.js
+codekit-config.json
+
+
+# PhpStorm
+*.idea
+
+
+# SASS
+.sass-cache
+*.css.map
+
+
+# Project Output Files
+node_modules/
+_dist/
+

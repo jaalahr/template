@@ -1,0 +1,379 @@
+// Global Reset
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	line-height: normal;
+	margin: 4px 0 0;
+	margin-top: 1px \9;
+}
+
+input[type="file"] {
+	display: block;
+}
+
+input[type="range"] {
+	display: block;
+	width: 100%;
+}
+
+input[type="search"] {
+	@include m-box-sizing(border-box);
+}
+
+select[multiple], select[size] {
+	height: auto;
+}
+
+input[type="checkbox"]:focus, input[type="file"]:focus, input[type="radio"]:focus {
+	@include m-tab-focus;
+}
+
+output {
+	
+	display: block;
+	line-height: $line-height-base;
+	padding-top: ($padding-vertical-base + 1);
+	
+	@include m-color( color, $input-font-color, 1 );
+	@include m-font-size( $font-size-base ); 
+}
+
+textarea.form-control {
+	height: auto;
+}
+
+// Fieldsets
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+fieldset {
+	border: 0;
+	margin: 0;
+	min-width: 0;
+	padding: 0;
+}
+
+// Labels
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+label {
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	max-width: 100%;
+}
+
+// Legends
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+legend {
+
+	border: 0;
+	display: block;
+	font-size: ($font-size-base / 1.5);
+	line-height: inherit;
+	margin-bottom: $line-height-computed;
+	padding: 0;
+	width: 100%;
+	
+	@include m-border-color( border-bottom, 1px, solid, $legend-border-color, 1 );
+	@include m-color( color, $legend-font-color, 1 );
+}
+
+// Form Controls
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.form-control {
+	
+	background-image: none;
+	border-radius: $input-border-radius;
+	display: block;
+	height: $input-height-base;
+	line-height: $line-height-base;
+	padding: $padding-vertical-base $padding-horizontal-base;
+	width: 100%;
+	
+	@include m-border-color( border, 1px, solid, $input-border-color, 1 );
+	@include m-box-shadow( inset 0 1px 1px rgba(0, 0, 0, .075) );
+	@include m-color( background-color, $input-background-color, 1 );
+	@include m-color( color, $input-font-color, 1 );
+	@include m-font-size( $font-size-base );
+	@include m-form-control-focus;
+	@include m-placeholder;
+	@include m-transition( border-color ease-in-out .15s, box-shadow ease-in-out .15s );
+	
+	
+	&[disabled], &[readonly], fieldset[disabled] & {
+	
+		cursor: $cursor-disabled;
+		
+		@include m-color( background-color, $input-background-color-disabled, 1 );
+		@include m-opacity(1);
+	}
+}
+	
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+.checkbox, .radio {
+	
+	display: block;
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	
+	label {
+		cursor: pointer;
+		font-weight: normal;
+		margin-bottom: 0;
+		min-height: $line-height-computed;
+		padding-left: 20px;
+	}
+}
+
+.checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"], .radio input[type="radio"], .radio-inline input[type="radio"] {
+	margin-left: -20px;
+	margin-top: 4px \9;
+	position: absolute;
+}
+
+.checkbox + .checkbox, .radio + .radio {
+	margin-top: -5px; 
+}
+
+.checkbox-inline, .radio-inline {
+	cursor: pointer;	
+	font-weight: normal;
+	display: inline-block;
+	margin-bottom: 0;
+	padding-left: 20px;
+	vertical-align: middle;
+}
+
+.checkbox-inline + .checkbox-inline, .radio-inline + .radio-inline {
+	margin-left: 10px;
+	margin-top: 0;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  
+	&[disabled], &.disabled, fieldset[disabled] & {
+		cursor: $cursor-disabled;
+	}
+}
+
+.checkbox-inline, .radio-inline {
+
+	&.disabled, fieldset[disabled] & {
+		cursor: $cursor-disabled;
+	}
+}
+
+.checkbox, .radio {
+
+	&.disabled, fieldset[disabled] & {
+		
+		label {
+			cursor: $cursor-disabled;
+		}
+	}
+}
+
+// Form Controls (Feedback)
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.has-feedback {
+
+	position: relative;
+	
+	.form-control {
+		padding-right: ( $input-height-base * 1.25 );
+	}
+}
+
+.form-control-feedback {
+	display: block;
+	height: $input-height-base;
+	line-height: $input-height-base;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: $input-height-base;
+	z-index: 2; 
+}
+
+.input-lg + .form-control-feedback {
+	height: $input-height-lg;
+	line-height: $input-height-lg;
+	width: $input-height-lg;
+}
+
+.input-sm + .form-control-feedback {
+	height: $input-height-sm;
+	line-height: $input-height-sm;
+	width: $input-height-sm;
+}
+
+.has-error {
+	@include m-form-control-validation( $state-danger-font-color, $state-danger-font-color, $state-danger-background-color );
+}
+
+.has-success {
+	@include m-form-control-validation( $state-success-font-color, $state-success-font-color, $state-success-background-color );
+}
+
+.has-warning {
+	@include m-form-control-validation( $state-warning-font-color, $state-warning-font-color, $state-warning-background-color );
+}
+
+.has-feedback label {
+
+	& ~ .form-control-feedback {
+	 	top: ( $line-height-computed + 5 ); 
+	}
+	&.sr-only ~ .form-control-feedback {
+	 	top: 0;
+	}
+}
+
+// Form Controls (Sizes)
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+@include m-input-size('.input-sm', $input-height-sm, $padding-vertical-sm, $padding-horizontal-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm );
+
+@include m-input-size('.form-group-sm .form-control', $input-height-sm, $padding-vertical-sm, $padding-horizontal-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm );
+
+@include m-input-size('.input-lg', $input-height-lg, $padding-vertical-lg, $padding-horizontal-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg );
+
+@include m-input-size('.form-group-lg .form-control', $input-height-lg, $padding-vertical-lg, $padding-horizontal-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg );
+
+// Form Controls (Static)
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.form-control-static {
+
+	padding-bottom: ( $padding-vertical-base + 1 );
+	padding-top: ( $padding-vertical-base + 1 );
+	margin-bottom: 0;
+	
+	&.input-lg, &.input-sm {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Form Groups
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+// Help Blocks
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.help-block {
+	
+	color: lighten( $body-font-color, 25% );
+	display: block; 
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+// Horizontal Form
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.horizontal-form {
+
+	.checkbox, .checkbox-inline, .radio, .radio-inline {
+		margin-bottom: 0;
+		margin-top: 0;
+		padding-top: ($padding-vertical-base + 1);
+	}
+		
+	.checkbox, .radio {
+		min-height: ( $line-height-computed + ($padding-vertical-base + 1) );
+	}
+
+	.form-group {
+		@include m-create-row;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		
+		.control-label {
+			margin-bottom: 0;
+			padding-top: ($padding-vertical-base + 1);
+			text-align: right;
+		}
+	}
+
+	.has-feedback .form-control-feedback {
+		right: ($grid-gutter-width / 2);
+	}
+
+	.form-group-lg {
+
+		@media (min-width: $screen-sm-min) {
+			.control-label {
+				padding-top: ( ($padding-vertical-lg * $line-height-lg) + 1 );
+			}
+		}
+	}
+
+	.form-group-sm {
+		
+		@media (min-width: $screen-sm-min) {
+			
+			.control-label {
+				padding-top: ($padding-vertical-sm + 1);
+			}
+		}
+	}
+}
+
+// Inline Form
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+
+.inline-form {
+	@include m-inline-form;
+}
+
+// iOS Temporal Input Styles
+// @source base/ui-patterns/_forms.scss
+// --------------------------------------------------
+	
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	
+	input[type="date"], input[type="datetime-local"], input[type="month"], input[type="time"] {
+		line-height: $input-height-base;
+	}
+	
+	input[type="date"].input-sm, input[type="datetime-local"].input-sm, input[type="month"].input-sm, input[type="time"].input-sm {
+		line-height: $input-height-sm;
+	}
+	
+	input[type="date"].input-lg, input[type="datetime-local"].input-lg, input[type="month"].input-lg, input[type="time"].input-lg {
+		line-height: $input-height-lg;
+	}
+}

@@ -1,0 +1,28 @@
+// Pagination Size
+// @source base/mixins/_pagination.scss
+// --------------------------------------------------
+
+@mixin m-pagination-size( $padding-vertical, $padding-horizontal, $font-size, $border-radius ) {
+
+	> li {
+
+		> a, > span {
+			font-size: $font-size;
+			padding: $padding-vertical $padding-horizontal;
+		}
+
+		&:first-child {
+
+			> a, > span {
+				@include m-border-radius-left($border-radius);
+			}
+		}
+
+		&:last-child {
+
+			> a, > span {
+				@include m-border-radius-right($border-radius);
+			}
+		}
+	}
+}

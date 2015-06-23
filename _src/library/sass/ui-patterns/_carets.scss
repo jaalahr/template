@@ -1,0 +1,14 @@
+// BEGIN: Carets
+// @source base/ui-patterns/_carets.scss
+// --------------------------------------------------
+
+.caret {
+	border-left:  $caret-width-base solid transparent;
+	border-right: $caret-width-base solid transparent;
+	border-top:   $caret-width-base solid;
+	display: inline-block;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	width: 0;
+}

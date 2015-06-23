@@ -1,0 +1,12 @@
+//  Progress Bar Variation
+// @source base/mixins/_progress-bar.scss
+// --------------------------------------------------
+
+@mixin m-progress-bar-variation( $color ) {
+  
+	background-color: $color;
+	
+	.progress-striped & {
+		@include m-gradient-striped;
+	}
+}

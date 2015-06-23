@@ -1,0 +1,32 @@
+// BEGIN: Close Buttons
+// @source base/ui-patterns/_close-buttons.scss
+// --------------------------------------------------
+
+.close {
+	
+	color: $close-button-font-color;
+	float: right;
+	font-size: ($font-size-base * 1.5);
+	font-weight: $close-button-font-weight;
+	line-height: 1;
+	text-shadow: $close-button-text-shadow;
+	
+	@include m-opacity(.2);
+
+	&:focus, &:hover {
+	
+		color: $close-button-font-color;
+		cursor: pointer;
+		text-decoration: none;
+	
+		@include m-opacity(.5);
+	}
+}
+
+button.close {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 0;
+	-webkit-appearance: none;
+}

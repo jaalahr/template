@@ -1,0 +1,15 @@
+// Label Variation
+// @source base/mixins/_labels.scss
+// --------------------------------------------------
+
+@mixin m-label-variation($color) {
+
+	background-color: $color;
+
+	&[href] {
+		
+		&:hover, &:focus {
+			background-color: darken( $color, 10% );
+		}
+	}
+}

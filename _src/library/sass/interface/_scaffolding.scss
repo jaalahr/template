@@ -1,0 +1,28 @@
+// Scaffolding
+// @source interface/_scaffolding.scss
+// --------------------------------------------------
+
+html, body {
+	
+	@include m-translateY(0);
+	@include m-transition( $default-transition-transform );
+}
+
+.wrapper {
+	
+	background: $body-background-color;
+	display: block;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: $z-index-wrapper;
+	
+	@include m-clearfix();
+	@include m-translateX(0);
+}

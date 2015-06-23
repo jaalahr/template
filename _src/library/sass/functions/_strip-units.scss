@@ -1,0 +1,7 @@
+// Strip Units
+// @source base/functions/_strip-units.scss
+// --------------------------------------------------
+
+@function strip-units( $number ) {
+  @return $number / ( $number * 0 + 1 );
+}

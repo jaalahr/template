@@ -1,0 +1,99 @@
+// Calculate Grid Column
+// @source base/mixins/_grid-framework.scss
+// --------------------------------------------------
+
+@mixin m-calculate-grid-column( $index, $class, $type ) {
+
+	@if ( $type == width ) and ( $index > 0 ) {
+		.col-#{$class}-#{$index} {
+			width: percentage( ( $index / $grid-columns ) );
+		}
+	}
+
+	@if ( $type == push ) and ( $index > 0 ) {
+		.col-#{$class}-push-#{$index} {
+			left: percentage( ( $index / $grid-columns ) );
+		}
+	}
+
+	@if ( $type == push ) and ( $index == 0 ) {
+		.col-#{$class}-push-0 {
+			left: auto;
+		}
+	}
+
+	@if ( $type == pull ) and ( $index > 0 ) {
+		.col-#{$class}-pull-#{$index} {
+			right: percentage( ( $index / $grid-columns ) );
+		}
+	}
+
+	@if ( $type == pull ) and ( $index == 0 ) {
+		.col-#{$class}-pull-0 {
+			right: auto;
+		}
+	}
+
+	@if ( $type == offset ) {
+		.col-#{$class}-offset-#{$index} {
+			margin-left: percentage( ( $index / $grid-columns ) );
+		}
+	}
+}
+
+// Float Grid Columns
+// @source base/mixins/_grid-framework.scss
+// --------------------------------------------------
+
+@mixin m-float-grid-columns( $class, $i: 1, $list: ".col-#{$class}-#{$i}" ) {
+
+	@for $i from ( 1 + 1 ) through $grid-columns {
+		$list: "#{$list}, .col-#{$class}-#{$i}";
+	}
+
+	#{$list} {
+		float: left;
+	}
+}
+
+// Loop Grid Columns
+// @source base/mixins/_grid-framework.scss
+// --------------------------------------------------
+
+@mixin m-loop-grid-columns( $columns, $class, $type ) {
+	
+	@for $i from 0 through $columns {
+		@include m-calculate-grid-column( $i, $class, $type );
+	}
+}
+
+// Create Grid
+// @source base/mixins/_grid-framework.scss
+// --------------------------------------------------
+
+@mixin m-create-grid( $class ) {
+
+	@include m-float-grid-columns( $class );
+	@include m-loop-grid-columns( $grid-columns, $class, width );
+	@include m-loop-grid-columns( $grid-columns, $class, pull );
+	@include m-loop-grid-columns( $grid-columns, $class, push );
+	@include m-loop-grid-columns( $grid-columns, $class, offset );
+}
+
+// Create Grid Columns
+// @source base/mixins/_grid-framework.scss
+// --------------------------------------------------
+
+@mixin m-create-grid-columns( $i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}" ) {
+
+	@for $i from ( 1 + 1 ) through $grid-columns {
+		$list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+	}
+
+	#{$list} {
+		min-height: 1px;
+		padding-left:  ( $grid-gutter-width / 2 );
+		padding-right: ( $grid-gutter-width / 2 );
+		position: relative;
+	}
+}

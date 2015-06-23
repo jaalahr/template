@@ -1,0 +1,11 @@
+// BEGIN: Element Placeholders
+// @source base/placeholders/_elements.scss
+// --------------------------------------------------
+
+%block-element {
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+

@@ -1,0 +1,59 @@
+// BEGIN: Badges
+// @source base/ui-patterns/_badges.scss
+// --------------------------------------------------
+
+.badge {
+	
+	background-color: $badge-background-color;
+	border-radius: $badge-border-radius;	
+	color: $badge-font-color;
+	display: inline-block;
+	font-size: $font-size-sm;
+	font-weight: $badge-font-weight;
+	line-height: $badge-line-height;
+	min-width: 10px;
+	padding: 3px 7px;
+	text-align: center;
+	vertical-align: baseline;
+	white-space: nowrap;
+
+	&:empty {
+		display: none;
+	}
+
+	.button & {
+		position: relative;
+		top: -1px;
+	}
+
+	.button-xs & {
+		padding: 1px 5px;
+		top: 0;
+	}
+
+	.list-group-item.active > &, .nav-pills > .active > a > & {
+		color: $badge-font-color-active;
+		background-color: $badge-background-color-active;
+	}	
+
+	.list-group-item > & {
+		float: right;
+	}
+
+	.list-group-item > & + & {
+		margin-right: 5px;
+	}
+
+	.nav-pills > li > a > & {
+		margin-left: 3px;
+	}
+}
+
+a.badge { 
+
+	&:focus, &:hover {
+		color: $badge-anchor-font-color-hover;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,40 @@
+// BEGIN: List Group Item Variation
+// @source base/mixins/_lists.scss
+// --------------------------------------------------
+
+@mixin m-list-group-item-variation( $state, $background, $color ) {
+	
+	.list-group-item-#{$state} {
+		background-color: $background;
+		color: $color;
+	}
+	
+	a.list-group-item-#{$state} {
+		
+		color: $color;
+	
+		.list-group-item-heading {
+			color: inherit;
+		}
+	
+		&:hover, &:focus {
+			background-color: darken($background, 5%);
+			color: $color;
+		}
+	
+		&.active, &.active:hover, &.active:focus {
+			background-color: $color;
+			border-color: $color;
+			color: $color-white;
+		}
+	}
+}
+
+// Unstyled List
+// @source base/mixins/_lists.scss
+// --------------------------------------------------
+
+@mixin m-unstyled-list {
+	list-style: none;
+	padding-left: 0;
+}

@@ -1,0 +1,63 @@
+// BEGIN: Labels
+// @source base/ui-patterns/_labels.scss
+// --------------------------------------------------
+
+.label {
+	
+	border-radius: .25em;
+	color: $label-font-color;
+	display: inline;
+	font-size: 75%;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	padding: .2em .6em .3em;
+	vertical-align: baseline;
+	white-space: nowrap;
+	
+	&:empty {
+		display: none;
+	}
+
+	.button & {
+		position: relative;
+		top: -1px;
+	}
+}
+
+a.label {
+
+	&:hover, &:focus {
+		color: $label-anchor-font-color-hover;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+// BEGIN: Label Variations
+// @source base/ui-patterns/_labels.scss
+// --------------------------------------------------
+
+.label-danger {
+	@include m-label-variation( $label-background-color-danger );
+}
+
+.label-default {
+	@include m-label-variation( $label-background-color-default );
+}
+
+.label-info {
+	@include m-label-variation( $label-background-color-info );
+}
+
+.label-primary {
+	@include m-label-variation( $label-background-color-primary );
+}
+
+.label-success {
+	@include m-label-variation( $label-background-color-success );
+}
+
+.label-warning {
+	@include m-label-variation( $label-background-color-warning );
+}

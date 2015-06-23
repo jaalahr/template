@@ -1,0 +1,85 @@
+// BEGIN: Pagination
+// @source base/ui-patterns/_pagination.scss
+// --------------------------------------------------
+
+.pagination {
+
+	border-radius: $border-radius-base;
+	display: inline-block;
+	margin: $line-height-computed 0;
+	padding-left: 0;
+
+	> li {
+	
+		display: inline;
+
+		> a, > span {
+			background-color: $pagination-background-color;
+			border: 1px solid $pagination-border-color;
+			color: $pagination-font-color;
+			float: left; 
+			line-height: $line-height-base;
+			margin-left: -1px;
+			padding: $padding-vertical-base $padding-horizontal-base;
+			position: relative;
+			text-decoration: none;
+			
+		}
+
+		&:first-child {
+			
+			> a, > span {
+				
+				margin-left: 0;
+				
+				@include m-border-radius-left( $border-radius-base );
+			}
+		}
+
+		&:last-child {
+
+			> a, > span {
+				@include m-border-radius-right( $border-radius-base );
+			}
+		}
+	}
+
+	> li > a, > li > span {
+
+		&:hover, &:focus {
+			background-color: $pagination-background-color-hover;
+			border-color: $pagination-border-color-hover;
+			color: $pagination-font-color-hover;
+		}
+	}
+
+	> .active > a, > .active > span {
+
+		&, &:hover, &:focus {
+			background-color: $pagination-background-color-active;
+			border-color: $pagination-border-color-active;
+			color: $pagination-font-color-active;
+			cursor: default;
+			z-index: 2;
+		}
+	}
+
+	> .disabled { 
+	
+		> span, > span:hover, > span:focus, > a, > a:hover, > a:focus {
+			background-color: $pagination-background-color-disabled;
+			border-color: $pagination-border-color-disabled;
+			color: $pagination-font-color-disabled;
+			cursor: $cursor-disabled;
+		}
+	}
+}
+
+
+.pagination-lg {
+	@include m-pagination-size( $padding-vertical-lg, $padding-horizontal-lg, $font-size-lg, $border-radius-lg );
+}
+
+.pagination-sm {
+	@include m-pagination-size( $padding-vertical-sm, $padding-horizontal-sm, $font-size-sm, $border-radius-sm );
+}

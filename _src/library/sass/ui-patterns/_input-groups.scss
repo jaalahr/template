@@ -1,0 +1,132 @@
+// BEGIN: Input Groups
+// @source base/ui-patterns/_input-groups.scss
+// --------------------------------------------------
+
+.input-group {
+
+	border-collapse: separate; 
+	display: table;
+	position: relative;
+	
+	&[class*="col-"] {
+		float: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.form-control {
+		float: left;
+		margin-bottom: 0;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+}
+
+.input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-button > .button {
+	@extend .input-lg;
+}
+
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-button > .button {
+	@extend .input-sm;
+}
+
+.input-group-addon, .input-group-button, .input-group .form-control {
+
+	display: table-cell;
+
+	&:not(:first-child):not(:last-child) {
+		border-radius: 0;
+	}
+}
+
+.input-group-addon, .input-group-button {
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 1%;
+}
+
+.input-group-addon {
+
+	background-color: $input-group-addon-background-color;
+	border: 1px solid $input-group-addon-border-color;
+	border-radius: $border-radius-base;
+	color: $input-font-color;
+	font-size: $font-size-base;
+	font-weight: normal;
+	line-height: 1;
+	padding: $padding-vertical-base $padding-horizontal-base;
+	text-align: center;
+	
+	&.input-lg {
+
+		border-radius: $border-radius-lg;
+		font-size: $font-size-lg;
+		padding: $padding-vertical-lg $padding-horizontal-lg;
+	}
+
+	&.input-sm {
+		border-radius: $border-radius-sm;
+		font-size: $font-size-sm;
+		padding: $padding-vertical-sm $padding-horizontal-sm;
+	}
+
+
+	input[type="checkbox"], input[type="radio"] {
+		margin-top: 0;
+	}
+}
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-button:first-child > .button, .input-group-button:first-child > .button-group > .button, .input-group-button:first-child > .dropdown-toggle, .input-group-button:last-child > .button:not(:last-child):not(.dropdown-toggle), .input-group-button:last-child > .button-group:not(:last-child) > .button {
+	@include m-border-radius-right(0);
+}
+
+.input-group-addon:first-child {
+	border-right: 0;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-button:last-child > .button, .input-group-button:last-child > .button-group > .button, .input-group-button:last-child > .dropdown-toggle, .input-group-button:first-child > .button:not(:first-child), .input-group-button:first-child > .button-group:not(:first-child) > .button {
+	@include m-border-radius-left(0);
+}
+
+.input-group-addon:last-child {
+	border-left: 0;
+}
+
+// BEGIN: Button Input Groups
+// @source base/ui-patterns/_input-groups.scss
+// --------------------------------------------------
+
+.input-group-button {
+
+	font-size: 0;
+	position: relative;
+	white-space: nowrap;
+
+	> .button {
+
+		position: relative;
+		
+		+ .button {
+			margin-left: -1px;
+		}
+
+		&:hover, &:focus, &:active {
+			z-index: 2;
+		}
+	}
+
+	&:first-child {
+
+		> .button, > .button-group {
+			margin-right: -1px;
+		}
+	}
+
+	&:last-child {
+
+		> .button, > .button-group {
+			margin-left: -1px;
+		}
+	}
+}

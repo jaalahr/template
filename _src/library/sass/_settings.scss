@@ -1,0 +1,589 @@
+//---------------------------------------
+// Global Settings
+//---------------------------------------
+
+
+$font-path:											'../fonts' !default;
+$icon-font-path:          			$font-path !default;
+$image-path:										'../images' !default;
+
+$default-animation-easing:					'ease-in-out' !default;
+$default-animation-timing:					.15s !default;
+$default-transition-transform:				0.2s cubic-bezier(0.005, 0.98, 0.83, 1) 0s !default;
+
+
+//---------------------------------------
+// Color Definitions
+//---------------------------------------
+
+
+$color-black:										#000000 !default;
+$color-gray:      					#666666 !default;
+$color-gray-dark:   				#333333 !default;
+$color-gray-darker:         						#191919 !default; 
+$color-gray-light:  					#999999 !default; 
+$color-gray-lighter:				#eeeeee !default;
+$color-white:										#ffffff !default;
+
+$primary-color-danger:						#d9534f !default;						
+$primary-color-info:								#5bc0de !default;
+$primary-color:									$color-gray-dark !default;
+$primary-color-success:						#5cb85c !default;
+$primary-color-warning:						#f0ad4e !default;
+
+$state-danger-background-color:                										#f2dede !default;
+$state-danger-border-color: darken(adjust-hue($state-danger-background-color, -10), 5%) !default;
+$state-danger-font-color:   	#a94442 !default;
+
+$state-info-background-color:                 #d9edf7 !default;
+$state-info-border-color:   	darken( adjust-hue( $state-info-background-color, -10 ), 7% ) !default;
+$state-info-font-color:     		#31708f !default;
+
+$state-success-background-color:               										#dff0d8 !default;
+$state-success-border-color:          	 	darken( adjust-hue( $state-success-background-color, -10 ), 5% ) !default;
+$state-success-font-color:  	#3c763d !default;
+
+$state-warning-background-color:              											#fcf8e3 !default;
+$state-warning-border-color:darken( adjust-hue( $state-warning-background-color, -10 ), 5% ) !default;
+$state-warning-font-color:  	#8a6d3b !default;
+
+
+//---------------------------------------
+// Scaffolding
+//---------------------------------------
+
+
+$anchor-font-color:								$primary-color !default;
+$anchor-font-color-hover:					darken($primary-color, 15%) !default;
+$anchor-text-decoration-hover:			underline !default;
+
+$body-background-color:						$color-white !default;
+$body-font-color:									$color-gray-dark !default;
+
+$border-color-base:								#dddddd !default;
+$border-radius-base:       			 		4px !default;
+$border-radius-lg:      					 		6px !default;
+$border-radius-sm:    			   				3px !default;
+
+$cursor-disabled:									not-allowed !default;
+
+$padding-horizontal-base:   				12px !default;
+$padding-horizontal-lg:       					16px !default;
+$padding-horizontal-sm:       				10px !default;
+$padding-horizontal-xs:     					5px !default;
+
+$padding-vertical-base:       				6px !default;
+$padding-vertical-lg:         					10px !default;
+$padding-vertical-sm:         					5px !default;
+$padding-vertical-xs:        				    1px !default;
+
+
+//---------------------------------------
+// Typography
+//---------------------------------------
+
+
+$font-family-sans-serif:  						"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:         						Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:     				Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:          						$font-family-sans-serif !default;
+
+$font-size-base: 					14px !default;
+
+$font-size-micro: 					8px !default;
+$font-size-xs: 						10px !default;
+$font-size-sm: 						12px !default;
+$font-size-md: 						16px !default;
+$font-size-lg: 						18px !default;
+$font-size-xs: 						24px !default;
+$font-size-jumbo: 					32px !default;
+
+$font-size-h1:  					 	36px !default;
+$font-size-h2:   						30px !default;
+$font-size-h3:   						24px !default; 
+$font-size-h4:  						18px !default;
+$font-size-h5:   						14px !default;
+$font-size-h6:   						12px !default;
+
+$line-height-base:           		1.428571429 !default; 
+$line-height-computed:       	floor( ( $font-size-base * $line-height-base ) ) !default;
+$line-height-lg:                   	1.33 !default;
+$line-height-sm:                 	1.5 !default;
+
+$abbr-border-color:								$color-gray-light !default;
+
+$blockquote-border-color:					$color-gray-light !default;
+$blockquote-font-size:							( $font-size-base * 1.25 ) !default;
+
+$headings-font-color:							$color-gray-dark !default;
+$headings-font-color-small:					$color-gray-light !default;
+$headings-font-family:                    											 			inherit !default;
+$headings-font-weight:						500 !default;
+$headings-line-height:							1.1 !default;
+
+$hr-border-color:        			$color-gray-lighter !default;
+
+$text-muted-font-color:						$color-gray-light !default;
+
+
+//---------------------------------------
+// Iconography
+//---------------------------------------
+
+
+$icon-font-name:                   "glyphicons-halflings-regular" !default;
+$icon-font-svg-id:                 	"glyphicons_halflingsregular" !default;
+
+
+//---------------------------------------
+// Breakpoints
+//---------------------------------------
+
+
+$screen-lg:       						1200px !default;
+$screen-lg-min:   					$screen-lg !default;
+$screen-md:       					992px !default;
+$screen-md-min:   				$screen-md !default;
+$screen-md-max:   				($screen-lg-min - 1) !default;
+$screen-sm:       					768px !default;
+$screen-sm-min:   				$screen-sm !default;
+$screen-sm-max:   				($screen-md-min - 1) !default;
+$screen-xs-max:   				($screen-sm-min - 1) !default;
+
+
+//---------------------------------------
+// Grid Defaults
+//---------------------------------------
+
+
+$grid-columns:                 		12 !default;
+$grid-float-breakpoint:      	$screen-sm-min !default;
+$grid-float-breakpoint-max:    ($grid-float-breakpoint - 1) !default;
+$grid-gutter-width:            	30px !default;
+
+
+//---------------------------------------
+// Container Defaults
+//---------------------------------------
+
+
+$container-desktop:                                    											(940px + $grid-gutter-width) !default;
+$container-desktop-lg:                                											(1140px + $grid-gutter-width) !default;
+$container-tablet:                                       											(720px + $grid-gutter-width) !default;
+$container-lg:                                             											$container-desktop-lg !default;
+$container-md:                                           											$container-desktop !default;
+$container-sm:                                           											$container-tablet !default;
+
+
+//---------------------------------------
+// Component Defaults
+//---------------------------------------
+
+
+$component-background-color-active:       											$primary-color !default;
+$component-font-color-active:    			$color-white !default;
+$component-offset-horizontal: 			180px !default;
+
+
+//---------------------------------------
+// Alerts
+//---------------------------------------
+
+
+$alert-padding:    					15px !default;
+$alert-border-radius:         					$border-radius-base !default;
+$alert-anchor-font-weight:      				bold !default;
+
+$alert-success-background-color:            											$state-success-background-color !default;
+$alert-success-font-color:    	$state-success-font-color !default;
+$alert-success-border-color:             	$state-success-border-color !default;
+
+$alert-info-background-color:            											        $state-info-background-color !default;
+$alert-info-font-color:                											  				$state-info-font-color !default;
+$alert-info-border-color:     	$state-info-border-color !default;
+
+$alert-warning-background-color:                 										$state-warning-background-color !default;
+$alert-warning-font-color:    	$state-warning-font-color !default;
+$alert-warning-border-color:  $state-warning-border-color !default;
+
+$alert-danger-background-color:                  										$state-danger-background-color !default;
+$alert-danger-font-color:     	$state-danger-font-color !default;
+$alert-danger-border-color:   $state-danger-border-color !default;
+
+
+//---------------------------------------
+// Badges
+//---------------------------------------
+
+
+$badge-anchor-font-color-hover:                    										$color-white !default;
+$badge-background-color:                                									$color-gray-light !default;
+$badge-background-color-active:                           								$color-white !default;
+$badge-border-radius:         	10px !default;
+$badge-font-color:      			$color-white !default;
+$badge-font-color-active:                     $anchor-font-color !default;
+$badge-font-weight:           	bold !default;
+$badge-line-height:             	1 !default;
+
+
+//---------------------------------------
+// Breadcrumbs
+//---------------------------------------
+
+
+$breadcrumb-background-color:                 										rgb(245, 245, 245) !default;
+$breadcrumb-font-color:   	rgb(204, 204, 204) !default;
+$breadcrumb-font-color-active:       	$color-gray-light !default;
+$breadcrumb-horizontal-padding: 		15px !default;
+$breadcrumb-separator:          			"/" !default;
+$breadcrumb-vertical-padding:   			8px !default;
+
+
+//---------------------------------------
+// Buttons
+//---------------------------------------
+
+
+$button-font-weight:     			normal !default;
+
+$button-default-background-color:                 										$color-white !default;
+$button-default-border-color:                         										rgb(204, 204, 204)!default;
+$button-default-font-color:                          											$color-gray-dark !default;
+
+$button-primary-background-color:                 									$primary-color !default;
+$button-primary-border-color:             darken($button-primary-background-color, 5%) !default;
+$button-primary-font-color:             			 											$color-white !default;
+
+$button-success-background-color:                            						$primary-color-success !default;
+$button-success-border-color:                         									darken($button-success-background-color, 5%) !default;
+$button-success-font-color:                        										 	$color-white !default;
+
+$button-info-background-color:                    										$primary-color-info !default;
+$button-info-border-color:                          										  	darken($button-info-background-color, 5%) !default;
+$button-info-font-color:                             											$color-white !default;
+
+$button-warning-background-color:                          							$primary-color-warning !default;
+$button-warning-border-color:                       										darken($button-warning-background-color, 5%) !default;
+$button-warning-font-color:                          										$color-white !default;
+
+$button-danger-background-color:                       								$primary-color-danger !default;
+$button-danger-border-color:                         										darken($button-danger-background-color, 5%) !default;
+$button-danger-font-color:                           										$color-white !default;
+
+$button-anchor-font-color-disabled:                   									$color-gray-light !default;
+
+
+//---------------------------------------
+// Carets
+//---------------------------------------
+
+
+$caret-width-base:          						4px !default;
+$caret-width-lg:         							5px !default;
+
+
+//---------------------------------------
+// Close Buttons
+//---------------------------------------
+
+
+$close-button-font-color:      	$color-black !default;
+$close-button-font-weight:   	bold !default;
+$close-button-text-shadow:   0 1px 0 $color-white !default;
+
+
+//---------------------------------------
+// Code
+//---------------------------------------
+
+
+$code-background-color:                       #f9f2f4 !default;
+$code-font-color:         			#c7254e !default;
+$kbd-background-color:                        $color-gray-dark !default;
+$pre-background-color:                       #f5f5f5 !default;
+$pre-border-color:   				#cccccc !default;
+$kbd-font-color:          			$color-white !default;
+$pre-font-color:        				$color-gray-dark !default;
+$pre-scrollable-max-height:     			340px !default;
+
+
+//---------------------------------------
+// Dropdowns
+//---------------------------------------
+
+
+$dropdown-anchor-background-color-active:        								$component-background-color-active !default;
+$dropdown-anchor-background-color-hover:         								#f5f5f5 !default;
+$dropdown-anchor-font-color: $color-gray-dark !default;
+$dropdown-anchor-font-color-active:     $component-font-color-active !default;
+$dropdown-anchor-font-color-disabled:   											$color-gray-light !default;
+$dropdown-anchor-font-color-hover:      darken( $color-gray-dark, 5% ) !default;
+$dropdown-background-color:                   										 	$color-white !default;
+$dropdown-background-color-divider:            										#e5e5e5 !default;
+$dropdown-border-color:     	rgba(0, 0, 0, .15) !default;
+$dropdown-border-color-fallback:       	#cccccc !default;
+$dropdown-caret-font-color:	$color-black !default;
+$dropdown-font-color-header:          	$color-gray-light !default;
+
+
+//---------------------------------------
+// Form Controls
+//---------------------------------------
+
+
+$input-background-color:						$color-white !default;
+$input-background-color-disabled:		$color-gray-lighter !default;
+$input-border-color:								#cccccc !default;
+$input-border-color-focus:					#66afe9 !default;
+$input-border-radius:							$border-radius-base !default;
+$input-border-radius-lg:						$border-radius-lg !default;
+$input-border-radius-sm:						$border-radius-sm !default;
+$input-font-color:									$color-gray !default;
+$input-font-color-placeholder:        		$color-gray-light !default;
+
+$input-height-base:								( $line-height-computed + ( $padding-vertical-base * 2 ) + 2 ) !default;
+$input-height-lg:									( ceil( $font-size-lg * $line-height-lg ) + ( $padding-vertical-lg * 2 ) + 2 ) !default;
+$input-height-sm:									( floor( $font-size-sm * $line-height-sm ) + ( $padding-vertical-sm * 2 ) + 2 ) !default;
+
+$input-group-addon-background-color:$color-gray-lighter !default;
+$input-group-addon-border-color:		$input-border-color !default;
+
+
+//---------------------------------------
+// Labels
+//---------------------------------------
+
+
+$label-anchor-font-color-hover:			$color-white !default;
+$label-background-color-danger:             											$primary-color-danger !default;
+$label-background-color-default:            $color-gray-light !default;
+$label-background-color-info:               $primary-color-info !default;
+$label-background-color-primary:            											$primary-color !default;
+$label-background-color-success:            											$primary-color-success !default;
+$label-background-color-warning:            											$primary-color-warning !default;
+$label-font-color:      				$color-white!default;
+
+
+//---------------------------------------
+// Lists
+//---------------------------------------
+
+
+$dl-offset-horizontal:							$component-offset-horizontal !default;
+
+$list-group-anchor-font-color:                          									#555555 !default;
+$list-group-anchor-font-color-hover:                    								#555555 !default;
+$list-group-anchor-font-color-heading:                  								$color-gray-dark !default;
+$list-group-background-color:                 $color-white !default;
+$list-group-background-color-active:                           						$component-background-color-active !default;
+$list-group-background-color-disabled:                          						$color-gray-lighter !default;
+$list-group-background-color-hover:                            						#f5f5f5 !default;
+$list-group-border-color:                              										#dddddd !default;
+$list-group-border-color-active:                       									$component-background-color-active !default;
+$list-group-border-radius:                       $border-radius-base !default;
+$list-group-font-color-active:                        										$component-font-color-active !default;
+$list-group-font-color-disabled:                  											$color-gray-light !default;
+
+
+//---------------------------------------
+// Modals
+//---------------------------------------
+
+
+$modal-backdrop-background-color:           										$color-black !default;
+$modal-backdrop-opacity:      				.5 !default;
+$modal-content-background-color:                                						$color-white !default;
+$modal-content-border-color:                      										rgba(0,0,0,.2) !default;
+$modal-content-border-color-fallback:          										#999999 !default;
+$modal-footer-border-color:   				#e5e5e5 !default;
+$modal-header-border-color:  			#e5e5e5!default;
+$modal-inner-padding:          				15px !default;
+$modal-title-line-height:         				$line-height-base !default;
+$modal-title-padding:  			15px !default;
+$modal-width-lg:         			900px !default;
+$modal-width-md:         		600px !default;
+$modal-width-sm:         		300px !default;
+
+
+//---------------------------------------
+// Off Canvas
+//---------------------------------------
+
+
+$off-canvas-background-color:			$color-gray-dark !default;
+$off-canvas-position:							100.5% !default;
+$off-canvas-transform-animation:		$default-transition-transform !default;
+$off-canvas-width:								rem-calculation(250) !default;
+
+
+//---------------------------------------
+// Pagination
+//---------------------------------------
+
+
+$pagination-background-color:                        									$color-white !default;
+$pagination-background-color-active:               									$primary-color !default;
+$pagination-background-color-disabled:             								$color-white !default;
+$pagination-background-color-hover:                 									$color-gray-lighter !default;
+$pagination-border-color:                                    								#dddddd !default;
+$pagination-border-color-active:                             								$primary-color !default;
+$pagination-border-color-disabled:                           							#dddddd !default; 
+$pagination-border-color-hover:                              							#dddddd !default; 
+$pagination-font-color:          $anchor-font-color !default;
+$pagination-font-color-active:                              								$color-white !default;
+$pagination-font-color-hover:                               								$anchor-font-color-hover !default;
+$pagination-font-color-disabled:                           								$color-gray-light !default;
+
+$pager-background-color:                             										$pagination-background-color !default;
+$pager-background-color-active:                      									$pagination-background-color-active !default;
+$pager-background-color-hover:                       									$pagination-background-color-hover !default;
+$pager-border-color:                        								 					$pagination-border-color !default;
+$pager-border-radius:       	15px !default;
+$pager-font-color-active:        $pagination-font-color-active !default;
+$pager-font-color-disabled:                 $pagination-font-color-disabled !default;
+
+
+//---------------------------------------
+// Panels
+//---------------------------------------
+
+
+$panel-background-color:                    $color-white !default;
+$panel-background-color-footer:             											#f5f5f5 !default;
+$panel-body-padding:							15px !default;
+$panel-border-color-inner:          			rgb(221, 221, 221) !default;
+$panel-border-radius:         					$border-radius-base !default;
+$panel-heading-padding:       				10px 15px !default;
+$panel-footer-padding:        				10px 15px !default;
+
+$panel-danger-border-color:       	  	$state-danger-border-color !default;
+$panel-danger-font-color:		$state-danger-font-color !default;
+$panel-danger-heading-background-color:    										$state-danger-background-color !default;
+
+$panel-default-border-color:        		#dddddd !default;
+$panel-default-font-color:         			$color-gray-dark !default;
+$panel-default-heading-background-color:    										#f5f5f5 !default;
+
+$panel-info-border-color:         	  		$state-info-border-color !default;
+$panel-info-font-color:          	   			$state-info-font-color !default;
+$panel-info-heading-background-color:      											$state-info-background-color !default;
+
+$panel-primary-border-color:        		$primary-color !default;
+$panel-primary-font-color:          			$color-white !default;
+$panel-primary-heading-background-color:    									$primary-color !default;
+
+$panel-success-border-color:        		$state-success-border-color !default;
+$panel-success-font-color:       	   		$state-success-font-color !default;
+$panel-success-heading-background-color:    									$state-success-background-color !default;
+
+$panel-warning-border-color:      	  	$state-warning-border-color !default;
+$panel-warning-font-color:         	 		$state-warning-font-color !default;
+$panel-warning-heading-background-color:   									 	$state-warning-background-color !default;
+
+
+//---------------------------------------
+// Popovers
+//---------------------------------------
+
+
+$popover-arrow-color:                                                     					$color-white !default;
+$popover-arrow-outer-color:                                             					fade_in(rgba(0, 0, 0, .2), 0.05) !default;
+$popover-arrow-outer-color-fallback:                                       			darken(#cccccc, 20%) !default;
+$popover-arrow-outer-width:                                                				( 10px + 1 ) !default;
+$popover-arrow-width:                                                      					10px !default;
+$popover-background-color:                          										$color-white !default;
+$popover-background-color-title:                    										darken($popover-background-color, 3%) !default;
+$popover-border-color:                                  										rgba(0, 0, 0, .2) !default;
+$popover-border-color-fallback:                         									#cccccc !default;
+$popover-max-width:                                     										276px !default;
+
+
+//---------------------------------------
+// Progress Bars
+//---------------------------------------
+
+
+$progress-background-color:                 #f5f5f5 !default;
+$progress-border-radius:      				$border-radius-base !default;
+$progress-bar-background-color:             											$primary-color !default;
+$progress-bar-background-color-danger:      										$primary-color-danger !default;
+$progress-bar-background-color-info:        											$primary-color-info !default;
+$progress-bar-background-color-success:     										$primary-color-success !default;
+$progress-bar-background-color-warning:     										$primary-color-warning !default;
+$progress-bar-font-color:          			$color-white !default;
+
+
+//---------------------------------------
+// Tables
+//---------------------------------------
+
+
+$legend-border-color: 			#e5e5e5 !default;
+$legend-font-color:        		$color-gray-dark !default;
+
+$table-background-color:                                           							transparent !default;
+$table-background-color-accent:                                 						#f9f9f9 !default;
+$table-background-color-active:                                   						#f5f5f5 !default;
+$table-background-color-hover:                                 							#f5f5f5 !default;
+$table-border-color:                                    									   		#dddddd !default;
+$table-cell-padding:                                       										8px !default;
+$table-condensed-cell-padding:                            								5px !default;
+
+
+//---------------------------------------
+// Thumbnails
+//---------------------------------------
+
+
+$thumbnail-background-color:                           									$body-background-color !default;
+$thumbnail-border-color:                     $border-color-base !default;
+$thumbnail-border-radius:   	$border-radius-base !default;
+$thumbnail-caption-color:     				$body-font-color !default;
+$thumbnail-caption-padding:   			9px !default;
+$thumbnail-padding:				4px !default;
+
+
+//---------------------------------------
+// Tooltips
+//---------------------------------------
+
+
+$tooltip-arrow-color:        		$color-black !default;
+$tooltip-arrow-width:         	5px !default;
+$tooltip-background-color:                             										$color-black !default;
+$tooltip-font-color:               	$color-white !default;
+$tooltip-max-width:           	200px !default;
+$tooltip-opacity:             		.9 !default;
+
+
+//---------------------------------------
+// Wells
+//---------------------------------------
+
+
+$well-background-color: #f5f5f5 !default;
+$well-border-color:     darken($well-background-color, 7%) !default;
+
+
+//---------------------------------------
+// Z-Index Master List
+//---------------------------------------
+
+
+$z-index-1:			 100 !default;
+$z-index-2:			 200 !default;
+$z-index-3:			 300 !default;
+$z-index-4:			 400 !default;
+$z-index-5:			 500 !default;
+$z-index-6:			 600 !default;
+$z-index-7:			 700 !default;
+$z-index-8:			 800 !default;
+$z-index-9:			 900 !default;
+$z-index-10:		 1000 !default;
+
+$z-index-dropdown:	 $z-index-5 !default;
+$z-index-modal:		 $z-index-10 !default;
+$z-index-off-canvas: $z-index-9 !default;
+$z-index-popovers:	 $z-index-6 !default;
+$z-index-tooltips:	 $z-index-7 !default;
+$z-index-wrapper:	 1 !default;

@@ -4,8 +4,8 @@ default:
         - concurrent:process_sass_dev
         - concurrent:process_jshint
         - concurrent:process_scsslint
+        - concurrent:process_uglify
         - concurrent:process_codekit
-        - concurrent:process_validation
 
 dist:
     description: 'Production build'
@@ -17,4 +17,3 @@ dist:
         - concurrent:process_uglify_imagemin
         - concurrent:process_codekit
         - concurrent:process_copy
-        - concurrent:process_validation

@@ -4,7 +4,7 @@ module.exports = {
 	},
 	js: {
 		files: 		['_src/library/js/**/*.{js,json}'],
-		tasks: 		['concurrent:process_jshint']
+		tasks: 		['concurrent:process_jshint', 'uglify']
 	},
 	sass: {
 		files: 		['_src/library/sass/**/*.{scss,sass}'],

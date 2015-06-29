@@ -31,8 +31,8 @@ requirejs.config({
     }
 
 });
-require(['client.app.js'], function(App){
-	App.init();
+require(['userInterface.js'], function(userInterface){
+    userInterface.init();
 });
 
 

@@ -35,6 +35,20 @@ module.exports = {
                 src: '_src/*.{html, ico}',
                 dest: '_dist/',
                 filter: 'isFile'
+            },
+            {
+                expand: true,
+                flatten: true,
+                src: '_src/js/modernizr.js',
+                dest: '_dist/js/',
+                filter: 'isFile'
+            },
+            {
+                expand: true,
+                flatten: true,
+                src: '_src/js/require.js',
+                dest: '_dist/js/',
+                filter: 'isFile'
             }
         ]
     }

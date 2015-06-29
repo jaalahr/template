@@ -4,11 +4,13 @@ define([
 	// Define required libraries for module
     // ---------------------------------------
 
-	"jquery", 
+	"jquery",
+    "migratePlugin",
 	"jqueryUI", 
-    "bootstrap"  
+    "bootstrap",
+    "console"
 
-],function(){
+],function($, migratePlugin){
 
 	function initUserInterface() {
 		log('init userInterface');
@@ -17,11 +19,16 @@ define([
         // Initialize functions
         // ---------------------------------------
 
+        loremIpsum();
 	}
 
     // ---------------------------------------
     // Define functions
     // ---------------------------------------
+
+    function loremIpsum() {
+        console.log("HELLO WORLD");
+    }
 
 	return {
 		init: initUserInterface

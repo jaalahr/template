@@ -8,7 +8,7 @@ module.exports = {
             dest: '_src/css/'
         }]
     },
-    dist: {
+    prod: {
         options: {
             style: 'compressed'
         },

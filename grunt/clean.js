@@ -1,3 +1,4 @@
 module.exports = {
-    clean: ["dist"]
+    dev: ["_src/js/"],
+    prod: ["_dist/"]
 };

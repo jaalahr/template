@@ -1,0 +1,1 @@
+define(["jquery","migratePlugin","jqueryUI","bootstrap","console"],function($,migratePlugin){function initUserInterface(){log("init userInterface"),loremIpsum()}function loremIpsum(){}return{init:initUserInterface}});

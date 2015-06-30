@@ -15,7 +15,7 @@ requirejs.config({
         // ---------------------------------------
 
         migratePlugin: 'libs/plugins/migrate',
-        jqueryUI:      'libs/vendor/jquery-ui/jquery-ui.min.js',
+        jqueryUI:      'libs/vendor/jquery-ui/jquery-ui.min',
         bootstrap:     'libs/plugins/bootstrap.min',
         console:       'libs/plugins/dev.console.min'
     },

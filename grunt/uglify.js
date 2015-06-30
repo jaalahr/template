@@ -1,12 +1,11 @@
-var main_js_files = [
-    '_src/library/js/main.js',
-    '_src/library/js/userInterface.js'
-];
-
 var uglify_files = [
     {
         dest: '_src/js/main.js',
-        src: main_js_files
+        src: '_src/library/js/main.js'
+    },
+    {
+        dest: '_src/js/userInterface.js',
+        src: '_src/library/js/userInterface.js'
     },
     {
         dest: '_src/js/modernizr.js',

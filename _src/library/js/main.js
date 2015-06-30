@@ -31,7 +31,7 @@ requirejs.config({
     }
 
 });
-require(['userInterface.js'], function(userInterface){
+requirejs(['js/userInterface.js'], function(userInterface){
     userInterface.init();
 });
 

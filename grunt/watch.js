@@ -4,7 +4,7 @@ module.exports = {
 	},
 	js: {
 		files: 		['_src/library/js/**/*.{js,json}'],
-		tasks: 		['concurrent:process_jshint', 'uglify']
+		tasks: 		['concurrent:process_jshint', 'process_uglify']
 	},
 	sass: {
 		files: 		['_src/library/sass/**/*.{scss,sass}'],
@@ -13,9 +13,5 @@ module.exports = {
     codekit: {
         files: 		['_src/library/kit/**/*.kit'],
         tasks: 		['concurrent:process_codekit']
-    },
-    validation: {
-        files: 		['_src/library/kit/**/*.kit', '_src/*.html'],
-        tasks: 		['concurrent:process_validation']
     }
 };

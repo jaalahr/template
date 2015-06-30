@@ -5,12 +5,11 @@ define([
     // ---------------------------------------
 
 	"jquery",
-    "migratePlugin",
 	"jqueryUI", 
     "bootstrap",
     "console"
 
-],function($, migratePlugin){
+],function($){
 
 	function initUserInterface() {
 		log('init userInterface');
@@ -27,7 +26,7 @@ define([
     // ---------------------------------------
 
     function loremIpsum() {
-        console.log("HELLO WORLD");
+        log("HELLO WORLD");
     }
 
 	return {

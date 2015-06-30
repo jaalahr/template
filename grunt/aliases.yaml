@@ -16,6 +16,6 @@ prod:
         - concurrent:process_sass_prod
         - concurrent:process_jshint
         - concurrent:process_scsslint
-        - concurrent:process_uglify_imagemin
+        - concurrent:process_uglify
         - concurrent:process_codekit
         - concurrent:process_copy_prod

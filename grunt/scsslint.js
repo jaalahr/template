@@ -1,9 +1,10 @@
 module.exports = {
     allFiles: [
-        '_src/library/sass/*.scss',
-        '_src/library/sass/**/*.scss',
-        '_src/library/sass/**/**/*.scss',
-        '_src/library/sass/**/**/**/*.scss'
+        'src/sass/*.scss',
+        'src/sass/**/*.scss',
+        'src/sass/**/**/*.scss',
+        'src/sass/**/**/**/*.scss',
+        '!src/sass/_normalize.scss'
     ],
     options: {
         config: 'scss-lint.yml',

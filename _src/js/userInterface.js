@@ -1,1 +1,0 @@
-define(["jquery","jqueryUI","bootstrap","console"],function($){function initUserInterface(){log("init userInterface"),loremIpsum()}function loremIpsum(){log("HELLO WORLD")}return{init:initUserInterface}});

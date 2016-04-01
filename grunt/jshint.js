@@ -1,6 +1,6 @@
 var jshint_files = [
-    '_src/library/js/**/*.js',
-    '!_src/library/js/libs/**/*.js'
+    'src/js/**/*.js',
+    '!src/js/libs/**/*.js'
 ];
 
 module.exports = {

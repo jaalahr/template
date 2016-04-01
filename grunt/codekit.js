@@ -1,7 +1,8 @@
 module.exports = {
     dev: {
         files : {
-            '_src/index.html' : '_src/library/kit/index.kit'
+            'src/index.html' : 'src/kit/index.kit',
+            '.tmp/index.html' : 'src/kit/index.kit'
         }
     }
 };

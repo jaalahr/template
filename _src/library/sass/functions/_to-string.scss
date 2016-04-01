@@ -1,7 +1,0 @@
-// FUNCTION: To String
-// @source base/functions/_to-string.scss
-// --------------------------------------------------
-
-@function to-string( $value ) {
-	@return inspect( $value );
-}

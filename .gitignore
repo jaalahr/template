@@ -32,5 +32,7 @@ codekit-config.json
 
 # Project Output Files
 node_modules/
-_dist/
+dist/
+src/js/libs/vendor
+.tmp/
 

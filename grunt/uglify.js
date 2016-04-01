@@ -1,19 +1,19 @@
 var uglify_files = [
     {
-        dest: '_src/js/main.js',
-        src: '_src/library/js/main.js'
+        dest: '.tmp/js/main.js',
+        src: 'src/js/main.js'
     },
     {
-        dest: '_src/js/userInterface.js',
-        src: '_src/library/js/userInterface.js'
+        dest: '.tmp/js/userInterface.js',
+        src: 'src/js/userInterface.js'
     },
     {
-        dest: '_src/js/modernizr.js',
-        src: '_src/library/js/libs/vendor/modernizr/modernizr.js'
+        dest: '.tmp/js/modernizr.js',
+        src: 'src/js/libs/vendor/modernizr/modernizr.js'
     },
     {
-        dest: '_src/js/require.js',
-        src: '_src/library/js/libs/vendor/requirejs/require.js'
+        dest: '.tmp/js/require.js',
+        src: 'src/js/libs/vendor/requirejs/require.js'
     }
 ];
 

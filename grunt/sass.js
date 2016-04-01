@@ -2,10 +2,10 @@ module.exports = {
     dev: {
         files: [{
             expand: true,
-            cwd: '_src/library/sass/',
+            cwd: 'src/sass/',
             ext: '.css',
             src: 'styles.scss',
-            dest: '_src/css/'
+            dest: '.tmp/css/'
         }]
     },
     prod: {
@@ -14,10 +14,10 @@ module.exports = {
         },
         files: [{
             expand: true,
-            cwd: '_src/library/sass/',
+            cwd: 'src/sass/',
             ext: '.css',
             src: 'styles.scss',
-            dest: '_src/css/'
+            dest: '.tmp/css/'
         }]
     }
 };

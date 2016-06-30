@@ -6,7 +6,7 @@ var jshint_files = [
 module.exports = {
     options: {
         force    : true,
-        elision  : false, 
+        elision  : false,
         "-W099"  : true,  // Ignore specific warnings
         bitwise  : false, // Prohibit bitwise operators (&, |, ^, etc.).
         browser  : true,  // Standard browser globals e.g. `window`, `document`.

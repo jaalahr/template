@@ -17,7 +17,7 @@ module.exports = {
             cwd: 'src/sass/',
             ext: '.css',
             src: 'styles.scss',
-            dest: '.tmp/css/'
+            dest: 'dist/css/'
         }]
     }
 };

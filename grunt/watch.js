@@ -3,15 +3,15 @@ module.exports = {
 		livereload: true
 	},
 	js: {
-		files: 		['src/js/**/*.{js,json}'],
-		tasks: 		['concurrent:process_jshint', 'process_uglify']
+		files: ['src/js/**/*.{js,json}'],
+		tasks: ['concurrent:jshint', 'concurrent:dev_uglify']
 	},
 	sass: {
-		files: 		['src/sass/**/*.{scss,sass}'],
-		tasks: 		['concurrent:process_sass_dev']
+		files: ['src/sass/**/*.{scss,sass}'],
+		tasks: ['concurrent:dev_sass']
 	},
     codekit: {
-        files: 		['src/kit/**/*.kit'],
-        tasks: 		['concurrent:process_codekit']
+        files: ['src/kit/**/*.kit'],
+        tasks: ['concurrent:dev_codekit']
     }
 };

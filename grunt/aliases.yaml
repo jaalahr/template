@@ -1,21 +1,20 @@
 default:
     description: 'Development build'
     tasks:
-        - concurrent:process_clean_dev
-        - concurrent:process_sass_dev
-        - concurrent:process_jshint
-        - concurrent:process_scsslint
-        - concurrent:process_uglify
-        - concurrent:process_codekit
-        - concurrent:process_copy_dev
+        - concurrent:dev_clean
+        - concurrent:dev_sass
+        - concurrent:jshint
+        - concurrent:scsslint
+        - concurrent:dev_uglify
+        - concurrent:dev_codekit
+        - concurrent:dev_copy
 
 prod:
     description: 'Production build'
     tasks:
-        - concurrent:process_clean_prod
-        - concurrent:process_sass_prod
-        - concurrent:process_jshint
-        - concurrent:process_scsslint
-        - concurrent:process_uglify
-        - concurrent:process_codekit
-        - concurrent:process_copy_prod
+        - concurrent:prod_clean
+        - concurrent:prod_sass
+        - concurrent:jshint
+        - concurrent:scsslint
+        - concurrent:prod_uglify
+        - concurrent:prod_copy

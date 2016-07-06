@@ -1,13 +1,21 @@
-var jsFiles = [
-    'src/js/modules/flower/models/*.js',
-    'src/js/module.flower.js'
-]
+// var files_contributors = [
+//     'src/js/modules/contributors/**/*.js'
+// ]
+//
+// var files_flowers = [
+//     'src/js/modules/flower/**/*.js',
+//     'src/js/module.flower.js'
+// ]
 
 var uglify_files_dev = [
-    {
-        dest: '.tmp/js/module.flower.js',
-        src: jsFiles
-    },
+    // {
+    //     dest: '.tmp/js/modules/contributors.js',
+    //     src: files_contributors
+    // },
+    // {
+    //     dest: '.tmp/js/modules/flowers.js',
+    //     src: files_flowers
+    // },
     {
         dest: '.tmp/js/main.js',
         src: 'src/js/main.js'
@@ -27,10 +35,14 @@ var uglify_files_dev = [
 ];
 
 var uglify_files_prod = [
-    {
-        dest: 'dist/js/module.flower.js',
-        src: jsFiles
-    },
+    // {
+    //     dest: '.tmp/js/modules/contributors.js',
+    //     src: files_contributors
+    // },
+    // {
+    //     dest: '.tmp/js/modules/flowers.js',
+    //     src: files_flowers
+    // },
     {
         dest: 'dist/js/main.js',
         src: 'src/js/main.js'

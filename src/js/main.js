@@ -1,5 +1,4 @@
 requirejs.config({
-    enforceDefine: true,
     paths: {
         jquery: [
             'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min',
@@ -13,5 +12,12 @@ requirejs.config({
 });
 define(['app'], function(app){
     'use strict';
-    app.init();
+
+    window.bankApp = {
+        models: {},
+        collections: {},
+        views: {}
+    };
+
+    app.initialize();
 });

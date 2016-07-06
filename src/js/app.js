@@ -1,29 +1,35 @@
 define([
-	"jquery",
-	"module.flower"
-], function($) {
+  'jquery',
+  'underscore',
+  'backbone',
+  'modules/salaries/views/account',
+  'modules/salaries/views/bank'
+], function($, _, Backbone) {
 
-	'use strict';
+    var bank = new Backbone.Collection();
 
-	// ---------------------------------------
-    // Define functions
-    // ---------------------------------------
+    var bankView = new bankApp.views.Bank({
+        collection: bank
+    });
 
-    function helloWorld() {
-        console.log("HELLO WORLD");
-    }
+    var account1 = new bankApp.models.Account({
+        memberID: '123',
+        memberName: 'Sample Testington',
+        balance: 1500
+    });
 
-	// ---------------------------------------
-	// List functions
-	// ---------------------------------------
+    bank.add(account1);
 
-	function build() {
-        helloWorld();
-	}
-
-	return {
-		init: build
-	};
-
-
+    //var salaries = function() {
+    //
+     //
+    //}
+    //
+    //var initialize = function(){
+     //   salaries();
+	//}
+    //
+	//return {
+	//	initialize: initialize
+	//};
 });

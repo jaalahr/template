@@ -8,16 +8,15 @@ requirejs.config({
         underscore:     'libs/underscore-min',
         backbone:       'libs/backbone-min',
         bootstrap:      'libs/bootstrap.min'
+    },
+    shim: {
+        'backbone': {
+            deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        }
     }
 });
 define(['app'], function(app){
     'use strict';
-
-    window.bankApp = {
-        models: {},
-        collections: {},
-        views: {}
-    };
-
     app.initialize();
 });

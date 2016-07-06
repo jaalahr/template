@@ -16,7 +16,7 @@ requirejs.config({
         }
     }
 });
-define(['app'], function(app){
+define(['define'], function(appView){
     'use strict';
-    new app;
+    new appView;
 });

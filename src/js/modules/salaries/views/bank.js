@@ -1,9 +1,9 @@
-define([
+define("Bank", [
   'jquery',
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-    bankApp.views.Bank = Backbone.View.extend({
+    return Backbone.View.extend({
         el: 'tbody',
 
         initialize: function() {
@@ -26,6 +26,4 @@ define([
             });
         }
     });
-
-    return bankApp.views.Bank;
 });

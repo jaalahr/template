@@ -21,6 +21,10 @@ var uglify_files_dev = [
         src: 'src/js/main.js'
     },
     {
+        dest: 'tmp/js/define.js',
+        src: 'src/js/define.js'
+    },
+    {
         dest: 'tmp/js/app.js',
         src: 'src/js/app.js'
     },

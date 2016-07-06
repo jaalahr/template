@@ -1,4 +1,4 @@
 module.exports = {
-    dev: [".tmp/js/"],
+    dev: ["tmp/js/"],
     prod: ["dist/"]
 };

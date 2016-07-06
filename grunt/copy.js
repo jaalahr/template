@@ -22,7 +22,7 @@ module.exports = {
                 flatten: true,
                 cwd: 'src/',
                 src: css,
-                dest: '.tmp/css/',
+                dest: 'tmp/css/',
                 filter: isFile
             },
             {
@@ -30,7 +30,7 @@ module.exports = {
                 flatten: true,
                 cwd: 'src/',
                 src: fonts,
-                dest: '.tmp/fonts/',
+                dest: 'tmp/fonts/',
                 filter: isFile
             },
             {
@@ -38,7 +38,7 @@ module.exports = {
                 flatten: true,
                 cwd: 'src/',
                 src: img,
-                dest: '.tmp/img/',
+                dest: 'tmp/img/',
                 filter: isFile
             },
             {
@@ -46,7 +46,7 @@ module.exports = {
                 flatten: false,
                 cwd: 'src/',
                 src: js,
-                dest: '.tmp/',
+                dest: 'tmp/',
                 filter: isFile
             },
             {
@@ -54,7 +54,7 @@ module.exports = {
                 flatten: true,
                 cwd: 'src/',
                 src: html,
-                dest: '.tmp/',
+                dest: 'tmp/',
                 filter: isFile
             },
             {
@@ -62,7 +62,7 @@ module.exports = {
                 flatten: true,
                 cwd: 'src/',
                 src: libs_src,
-                dest: '.tmp/js/libs/',
+                dest: 'tmp/js/libs/',
                 filter: isFile
             }
         ]

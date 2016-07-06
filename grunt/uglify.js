@@ -9,38 +9,38 @@
 
 var uglify_files_dev = [
     // {
-    //     dest: '.tmp/js/modules/contributors.js',
+    //     dest: 'tmp/js/modules/contributors.js',
     //     src: files_contributors
     // },
     // {
-    //     dest: '.tmp/js/modules/flowers.js',
+    //     dest: 'tmp/js/modules/flowers.js',
     //     src: files_flowers
     // },
     {
-        dest: '.tmp/js/main.js',
+        dest: 'tmp/js/main.js',
         src: 'src/js/main.js'
     },
     {
-        dest: '.tmp/js/app.js',
+        dest: 'tmp/js/app.js',
         src: 'src/js/app.js'
     },
     {
-        dest: '.tmp/js/libs/modernizr.js',
+        dest: 'tmp/js/libs/modernizr.js',
         src: 'src/js/libs/vendor/modernizr/modernizr.js'
     },
     {
-        dest: '.tmp/js/libs/require.js',
+        dest: 'tmp/js/libs/require.js',
         src: 'src/js/libs/vendor/requirejs/require.js'
     }
 ];
 
 var uglify_files_prod = [
     // {
-    //     dest: '.tmp/js/modules/contributors.js',
+    //     dest: 'tmp/js/modules/contributors.js',
     //     src: files_contributors
     // },
     // {
-    //     dest: '.tmp/js/modules/flowers.js',
+    //     dest: 'tmp/js/modules/flowers.js',
     //     src: files_flowers
     // },
     {

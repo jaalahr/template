@@ -34,5 +34,5 @@ codekit-config.json
 node_modules/
 dist/
 src/js/libs/vendor
-.tmp/
+tmp/
 

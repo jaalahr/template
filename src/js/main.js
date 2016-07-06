@@ -18,5 +18,12 @@ requirejs.config({
 });
 define(['app'], function(app){
     'use strict';
-    app.initialize();
+
+    window.bankApp = { 
+		models: {},
+		collections: {},
+		views: {}
+	};
+
+    new app;
 });

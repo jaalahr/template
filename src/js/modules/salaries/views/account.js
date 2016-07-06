@@ -3,6 +3,7 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
+
 	bankApp.views.Account = Backbone.View.extend({
 		tagName: 'tr',
 
@@ -32,4 +33,6 @@ define([
 			this.model.withdraw($input.val());
 		}
 	});
+
+    return bankApp.views.Account;
 });

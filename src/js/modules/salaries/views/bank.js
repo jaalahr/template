@@ -3,25 +3,29 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-	bankApp.views.Bank = Backbone.View.extend({
-		el: 'tbody',
+    bankApp.views.Bank = Backbone.View.extend({
+        el: 'tbody',
 
-		initialize: function() {
-			this.listenTo(this.collection, 'add', this.render);
-		},
+        initialize: function() {
+            this.listenTo(this.collection, 'add', this.render);
+        },
 
-		render: function() {
-			var that = this;
+        render: function() {
+            var that = this;
 
-			this.$el.empty();
+            this.$el.empty();
 
-			this.collection.each(function(account) {
-				var accountView = new bankApp.views.Account({
-					model: account
-				});
-				accountView.render();
-				that.$el.append(accountView.el);
-			});
-		}
-	});
+            this.collection.each(function(account) {
+                var accountView = new bankApp.views.Account({
+                    model: account
+                });
+
+                accountView.render();
+
+                that.$el.append(accountView.el);
+            });
+        }
+    });
+
+    return bankApp.views.Bank;
 });

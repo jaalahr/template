@@ -6,41 +6,17 @@ define([
   'modules/salaries/views/bank'
 ], function($, _, Backbone) {
 
-    // ------------------------------------------------
-    // Function: Salaries
-    // ------------------------------------------------
+    var bank = new Backbone.Collection();
 
-    var salaries = function() {
-        window.bankApp = {
-            models: {},
-            collections: {},
-            views: {}
-        };
+	var bankView = new bankApp.views.Bank({
+		collection: bank
+	});
 
-        var bank = new Backbone.Collection();
+	var account1 = new bankApp.models.Account({
+		memberID: '123',
+		memberName: 'Sample Testington',
+		balance: 1500
+	});
 
-        var bankView = new bankApp.views.Bank({
-            collection: bank
-        });
-
-        var account1 = new bankApp.models.Account({
-            memberID: '123',
-            memberName: 'Sample Testington',
-            balance: 1500
-        });
-
-        bank.add(account1);
-    }
-
-    // ------------------------------------------------
-    // Initialize
-    // ------------------------------------------------
-
-    var initialize = function(){
-        salaries();
-	}
-
-	return {
-		initialize: initialize
-	};
+	bank.add(account1);
 });

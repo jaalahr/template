@@ -12,18 +12,11 @@ requirejs.config({
     shim: {
         'backbone': {
             deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
+            exports: 'backbone'
         }
     }
 });
 define(['app'], function(app){
     'use strict';
-
-    window.bankApp = { 
-		models: {},
-		collections: {},
-		views: {}
-	};
-
     new app;
 });

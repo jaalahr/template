@@ -6,6 +6,12 @@ define([
   'modules/salaries/views/bank'
 ], function($, _, Backbone) {
 
+    window.bankApp = {
+		models: {},
+		collections: {},
+		views: {}
+	};
+
     var bank = new Backbone.Collection();
 
 	var bankView = new bankApp.views.Bank({
@@ -19,4 +25,5 @@ define([
 	});
 
 	bank.add(account1);
+
 });

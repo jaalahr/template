@@ -1,9 +1,12 @@
-define("account", [
+define('account-view',[
   'jquery',
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-	bankApp.views.Account = Backbone.View.extend({
+
+    console.log("---> Running views/account.js");
+
+	var View = Backbone.View.extend({
 		tagName: 'tr',
 
 		events: {
@@ -32,4 +35,5 @@ define("account", [
 			this.model.withdraw($input.val());
 		}
 	});
+    return View;
 });

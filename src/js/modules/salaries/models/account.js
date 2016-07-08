@@ -1,9 +1,12 @@
-define([
+define('account',[
   'jquery',
   'underscore',
   'backbone'
 ], function($, _, Backbone) {
-	bankApp.models.Account = Backbone.Model.extend({
+
+    console.log("---> Running model/account.js");
+
+	var Model = Backbone.Model.extend({
 		withdraw: function(amount) {
 			amount = parseInt(amount);
 			if (this.get('balance') >= amount) {
@@ -15,4 +18,5 @@ define([
 			return this.get('balance').toLocaleString(locale, { style: 'currency', currency: currency });
 		}
 	});
+    return Model;
 });

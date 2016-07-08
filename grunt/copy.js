@@ -2,7 +2,7 @@ var isFile =    [ 'isFile' ];
 var css =       [ 'css/**' ];
 var fonts =     [ 'fonts/**' ];
 var img =       [ 'img/**' ];
-var js =        [ 'js/modules/**' ];
+// var js =        [ 'js/modules/**' ];
 var html =      [ '*.html', '*.ico', '*.png' ];
 
 // Libraries
@@ -11,7 +11,7 @@ var libs_src = [
     'js/libs/vendor/jquery-ui/jquery-ui.min.js',
     'js/libs/vendor/underscore/underscore-min.js',
     'js/libs/vendor/backbone/backbone-min.js',
-    'js/libs/vendor/bootstrap/dist/js/bootstrap.min.js' 
+    'js/libs/vendor/bootstrap/dist/js/bootstrap.min.js'
 ];
 
 module.exports = {
@@ -41,14 +41,14 @@ module.exports = {
                 dest: 'tmp/img/',
                 filter: isFile
             },
-            {
-                expand: true,
-                flatten: false,
-                cwd: 'src/',
-                src: js,
-                dest: 'tmp/',
-                filter: isFile
-            },
+            // {
+            //     expand: true,
+            //     flatten: false,
+            //     cwd: 'src/',
+            //     src: js,
+            //     dest: 'tmp/',
+            //     filter: isFile
+            // },
             {
                 expand: true,
                 flatten: true,
@@ -93,14 +93,14 @@ module.exports = {
                 dest: 'dist/img/',
                 filter: isFile
             },
-            {
-                expand: true,
-                flatten: false,
-                cwd: 'src/',
-                src: js,
-                dest: 'dist/',
-                filter: isFile
-            },
+            // {
+            //     expand: true,
+            //     flatten: false,
+            //     cwd: 'src/',
+            //     src: js,
+            //     dest: 'dist/',
+            //     filter: isFile
+            // },
             {
                 expand: true,
                 flatten: true,

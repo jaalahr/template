@@ -25,6 +25,7 @@
     "time-grunt": "^1.0.0"
   },
   "dependencies": {
-    "grunt-cli": "^1.1.0"
+    "grunt-cli": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1"
   }
 }

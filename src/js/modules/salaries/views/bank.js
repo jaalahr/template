@@ -1,9 +1,13 @@
-define("Bank", [
+define('bank', [
   'jquery',
   'underscore',
-  'backbone'
-], function($, _, Backbone) {
-    return Backbone.View.extend({
+  'backbone',
+  'account'
+], function($, _, Backbone, AccountView) {
+
+    console.log("---> Running views/bank.js");
+
+    var View = Backbone.View.extend({
         el: 'tbody',
 
         initialize: function() {
@@ -16,7 +20,7 @@ define("Bank", [
             this.$el.empty();
 
             this.collection.each(function(account) {
-                var accountView = new bankApp.views.Account({
+                var accountView = new AccountView({
                     model: account
                 });
 
@@ -26,4 +30,5 @@ define("Bank", [
             });
         }
     });
+    return View;
 });

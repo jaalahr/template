@@ -8,6 +8,7 @@ module.exports = {
     dev_sass:       ['sass:dev'],
     dev_copy:       ['copy:dev'],
     dev_codekit:    ['codekit'],
+    dev_uglify:     ['concat:dev'],
     dev_uglify:     ['uglify:dev'],
 
     // Production

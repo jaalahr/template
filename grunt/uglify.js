@@ -2,10 +2,12 @@
 //     'src/js/modules/contributors/**/*.js'
 // ]
 //
-// var files_flowers = [
-//     'src/js/modules/flower/**/*.js',
-//     'src/js/module.flower.js'
-// ]
+var files_js = [
+
+    'src/js/app.js',
+    'src/js/modules/**/*.js'
+
+]
 
 var uglify_files_dev = [
     // {
@@ -20,13 +22,13 @@ var uglify_files_dev = [
         dest: 'tmp/js/main.js',
         src: 'src/js/main.js'
     },
-    {
-        dest: 'tmp/js/define.js',
-        src: 'src/js/define.js'
-    },
+    // {
+    //     dest: 'tmp/js/define.js',
+    //     src: 'src/js/define.js'
+    // },
     {
         dest: 'tmp/js/app.js',
-        src: 'src/js/app.js'
+        src: files_js
     },
     {
         dest: 'tmp/js/libs/modernizr.js',
@@ -53,7 +55,7 @@ var uglify_files_prod = [
     },
     {
         dest: 'dist/js/app.js',
-        src: 'src/js/app.js'
+        src: files_js
     },
     {
         dest: 'dist/js/libs/modernizr.js',

@@ -2,12 +2,11 @@ define('app', [
   'jquery',
   'underscore',
   'backbone',
-  'account-view',
+  'account',
   'bank'
-], function( $, _, Backbone, AccountView, BankView) {
-    console.log("---> Running main.js");
-
+], function( $, _, Backbone, AccountModel, BankView) {
     var Router = Backbone.Router.extend({
+
         routes: {
             "": "main"
         },
@@ -18,11 +17,13 @@ define('app', [
         		collection: bank
         	});
 
-        	var account1 = new AccountView({
+        	var account1 = new AccountModel({
         		memberID: '123',
         		memberName: 'Sample Testington',
         		balance: 1500
         	});
+
+            bank.add(account1);
         }
     });
 

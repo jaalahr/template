@@ -8,7 +8,7 @@ define('account-view',[
 
 	var View = Backbone.View.extend({
 		tagName: 'tr',
-
+        // template: window.jst["game.html"],
 		events: {
 			'submit': 'onSubmit'
 		},
@@ -17,6 +17,8 @@ define('account-view',[
 			this.listenTo(this.model, 'change:balance', this.render);
 		},
 		render: function() {
+            // this.template(data);
+
 			this.$el.empty();
 
 			this.$el.append($('<td>').text(this.model.get('memberName')));

@@ -2,7 +2,7 @@ define('bank', [
   'jquery',
   'underscore',
   'backbone',
-  'account'
+  'account-view'
 ], function($, _, Backbone, AccountView) {
 
     console.log("---> Running views/bank.js");

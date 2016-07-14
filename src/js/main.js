@@ -5,6 +5,7 @@ requirejs.config({
             'libs/jquery.min.js' // If CDN fails, load from this location
         ],
         jqueryUI:       'libs/jquery-ui.min',
+        backbone:       'libs/backbone-min',
         underscore:     'libs/underscore-min',
         bootstrap:      'libs/bootstrap.min'
     },
@@ -19,7 +20,6 @@ requirejs.config({
 require([
   // Load our app module and pass it to our definition function
   'app',
-
 ], function(App){
   // The "app" dependency is passed in as "App"
   // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function

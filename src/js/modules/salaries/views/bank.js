@@ -1,17 +1,15 @@
-define('bank', [
+define('bankView', [
   'jquery',
   'underscore',
   'backbone',
-  'account-view'
-], function($, _, Backbone, AccountView) {
-
-    console.log("---> Running views/bank.js");
+  'accountView'
+], function( $, _, Backbone, AccountView ) {
 
     var View = Backbone.View.extend({
         el: 'tbody',
 
         initialize: function() {
-            this.listenTo(this.collection, 'add', this.render);
+            this.listenTo( this.collection, 'add', this.render );
         },
 
         render: function() {
@@ -19,16 +17,18 @@ define('bank', [
 
             this.$el.empty();
 
-            this.collection.each(function(account) {
+            this.collection.each(function( accountModel ) {
                 var accountView = new AccountView({
-                    model: account
+                    model: accountModel
                 });
 
                 accountView.render();
 
-                that.$el.append(accountView.el);
+                that.$el.append( accountView.el );
             });
         }
     });
+
     return View;
+
 });

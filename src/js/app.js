@@ -2,9 +2,9 @@ define('app', [
   'jquery',
   'underscore',
   'backbone',
-  'account',
-  'bank'
-], function( $, _, Backbone, AccountModel, BankView) {
+  'accountModel',
+  'bankView'
+], function( $, _, Backbone, AccountModel, BankView ) {
     var Router = Backbone.Router.extend({
 
         routes: {
@@ -13,17 +13,18 @@ define('app', [
 
         main: function(){
             var bank = new Backbone.Collection();
+
             var bankView = new BankView({
         		collection: bank
         	});
 
-        	var account1 = new AccountModel({
-        		memberID: '123',
-        		memberName: 'Sample Testington',
+        	var accountOne = new AccountModel({
+        		memberID: '001',
+        		memberName: 'Jason Bourne',
         		balance: 1500
         	});
 
-            bank.add(account1);
+            bank.add(accountOne);
         }
     });
 

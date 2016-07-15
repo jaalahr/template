@@ -5,6 +5,7 @@ define('app', [
   'accountModel',
   'bankView'
 ], function( $, _, Backbone, AccountModel, BankView ) {
+
     var Router = Backbone.Router.extend({
 
         routes: {

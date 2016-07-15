@@ -5,8 +5,8 @@ requirejs.config({
             'libs/jquery.min.js' // If CDN fails, load from this location
         ],
         jqueryUI:       'libs/jquery-ui.min',
-        backbone:       'libs/backbone-min',
         underscore:     'libs/underscore-min',
+        backbone:       'libs/backbone-min',
         bootstrap:      'libs/bootstrap.min'
     },
     shim: {

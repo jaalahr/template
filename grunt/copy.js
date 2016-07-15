@@ -2,7 +2,6 @@ var isFile =    [ 'isFile' ];
 var css =       [ 'css/**' ];
 var fonts =     [ 'fonts/**' ];
 var img =       [ 'img/**' ];
-// var js =        [ 'js/modules/**' ];
 var html =      [ '*.html', '*.ico', '*.png' ];
 
 // Libraries
@@ -41,14 +40,6 @@ module.exports = {
                 dest: 'tmp/img/',
                 filter: isFile
             },
-            // {
-            //     expand: true,
-            //     flatten: false,
-            //     cwd: 'src/',
-            //     src: js,
-            //     dest: 'tmp/',
-            //     filter: isFile
-            // },
             {
                 expand: true,
                 flatten: true,
@@ -93,14 +84,6 @@ module.exports = {
                 dest: 'dist/img/',
                 filter: isFile
             },
-            // {
-            //     expand: true,
-            //     flatten: false,
-            //     cwd: 'src/',
-            //     src: js,
-            //     dest: 'dist/',
-            //     filter: isFile
-            // },
             {
                 expand: true,
                 flatten: true,

@@ -6,8 +6,7 @@ define('app', [
   'bankView'
 ], function( $, _, Backbone, AccountModel, BankView ) {
 
-    var Router = Backbone.Router.extend({
-
+    var SalaryRouter = Backbone.Router.extend({
         routes: {
             "": "main"
         },
@@ -29,7 +28,7 @@ define('app', [
         }
     });
 
-    var router = new Router();
+    var salaryRouter = new SalaryRouter();
 
     Backbone.history.start();
 

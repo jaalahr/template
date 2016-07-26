@@ -1,6 +1,7 @@
 var js_files = [
     'src/js/main.js',
     'src/js/app.js',
+    'src/js/book.js',
     'src/js/modules/**/*.js'
 ]
 
@@ -12,7 +13,7 @@ var uglify_files_dev = [
     {
         dest: 'tmp/js/libs/modernizr.js',
         src: 'src/js/libs/vendor/modernizr/modernizr.js'
-    }, 
+    },
     {
         dest: 'tmp/js/libs/require.js',
         src: 'src/js/libs/vendor/requirejs/require.js'

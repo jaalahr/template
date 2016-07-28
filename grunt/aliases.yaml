@@ -5,7 +5,6 @@ default:
         - concurrent:dev_sass
         - concurrent:jshint
         - concurrent:scsslint
-        # - concurrent:dev_concat
         - concurrent:dev_uglify
         - concurrent:dev_codekit
         - concurrent:dev_copy

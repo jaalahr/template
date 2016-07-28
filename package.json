@@ -7,23 +7,19 @@
     "url": ""
   },
   "devDependencies": {
-    "gifsicle": "^3.0.3",
     "grunt": "^0.4.5",
     "grunt-codekit": "^1.1.0",
     "grunt-concurrent": "^2.2.1",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-compress": "^1.1.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-newer": "^1.1.0",
     "grunt-sass": "^1.1.0",
     "grunt-scss-lint": "^0.3.4",
     "load-grunt-config": "^0.19.1",
     "matchdep": "^1.0.1",
-    "time-grunt": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1"
+    "time-grunt": "^1.0.0"
   },
   "dependencies": {
     "grunt-cli": "^1.1.0"
